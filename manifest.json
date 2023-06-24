@@ -1,0 +1,10 @@
+{
+    "name": "AI Image Replacer",
+    "version": "1.0.0",
+    "description": "This extension quickly eliminates AI-generated images",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "index.html",
+        "default_title": "AI Image Replacer"
+    }
+}
