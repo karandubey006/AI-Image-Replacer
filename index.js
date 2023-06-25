@@ -1,5 +1,12 @@
-const images = document.querySelectorAll("img");
+let images = document.getElementsByTagName('img');
+for(let i = 0; i < images.length; i++) {
+    chrome.runtime.sendMessage({msg: 'image', index: i}, function({data, index}){
+        images[index].src = data.link;
+    });
+}
 
+/* const images = document.querySelectorAll("img");
+console.log("scriptd loaded")
 async function isAIGenerated(src) {
     console.log(src)
     const str = `http://127.0.0.1:5000/inference?src=${src}`;
@@ -9,7 +16,8 @@ async function isAIGenerated(src) {
     console.log(data)
     return parseFloat(data.artificial) >= 0.5;
 }
-for (const element of images) {
+function detector(element) {
+    console.log("mouseover")
     isAIGenerated(element.src).then(res => {
         if (res) {
             element.src = "";
@@ -17,3 +25,8 @@ for (const element of images) {
         }
     });
 }
+for (const element of images) {
+    element.addEventListener("mouseover", detector);
+}
+ */
+
