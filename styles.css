@@ -60,3 +60,10 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+h1 {text-align: center;}
+
+option 
+{
+  text-align: center;
+  color: #2d2d2d;
+}
