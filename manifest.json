@@ -5,6 +5,7 @@
     "manifest_version": 3,
     "action": {
         "default_popup": "index.html",
-        "default_title": "AI Image Replacer"
+        "default_title": "AI Image Replacer",
+        "default_icon": "./icon.png"
     }
 }
