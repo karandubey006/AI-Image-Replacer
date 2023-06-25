@@ -5,7 +5,22 @@
     "manifest_version": 3,
     "action": {
         "default_popup": "index.html",
+<<<<<<< Updated upstream
         "default_title": "AI Image Replacer",
         "default_icon": "./icon.png"
+=======
+        "default_title": "AI Image Replacer"
+    },
+    "content_scripts": [
+    {
+      "js": ["contentScript.js"],
+      "matches": ["<all_urls>"],
+      "all_frames": true
+>>>>>>> Stashed changes
     }
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
 }
