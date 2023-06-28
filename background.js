@@ -12,9 +12,9 @@ chrome.runtime.onMessage.addListener(function(message, sender, senderResponse){
     console.log(src)
     console.log("fetching pika")
     const str = `http://127.0.0.1:5000/inference?src=${src}`;
-    let reqSrc = str.split("&").join("%26")
+    let reqSrc = str
     if (src.substring(0,4) !== "data") {
-        reqSrc = str
+        reqSrc = str.split("&").join("%26");
     }
     fetch(reqSrc)
         .then(response => response.json(), (err) => { console.log(err) })
